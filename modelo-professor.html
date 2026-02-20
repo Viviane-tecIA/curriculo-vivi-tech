@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Currículo Profissional - DIO</title>
+    <style>
+        /* Cores inspiradas no modelo da imagem */
+        :root {
+            --cor-primaria: #008b8b; /* Esse verde água escuro */
+            --cor-fundo-lateral: #f0f0f0;
+            --cor-texto: #333;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; display: flex; color: var(--cor-texto); }
+
+        /* Coluna da Esquerda */
+        .sidebar { width: 30%; background-color: var(--cor-fundo-lateral); padding: 30px; height: 100vh; }
+        .sidebar h1 { font-size: 22px; color: #000; text-transform: uppercase; }
+        .info-contato { font-size: 14px; margin-bottom: 20px; }
+        
+        /* Barrinhas de Progresso */
+        .skill-container { margin-bottom: 15px; }
+        .skill-bar { background: #ddd; height: 8px; border-radius: 5px; width: 100%; }
+        .skill-progress { background: var(--cor-primaria); height: 100%; border-radius: 5px; }
+
+        /* Coluna da Direita */
+        .main-content { width: 70%; padding: 40px; background: #fff; }
+        section { margin-bottom: 30px; }
+        h2 { border-bottom: 2px solid #eee; padding-bottom: 5px; color: var(--cor-primaria); display: flex; align-items: center; }
+        h2::before { content: '> '; margin-right: 10px; }
+
+        .item { margin-top: 15px; }
+        .data { font-weight: bold; color: var(--cor-primaria); font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h1>VIVIANE TEIXEIRA</h1>
+        <div class="info-contato">
+            <p>💼 Desenvolvedora Front-End</p>
+            <p>📍 Rio de Janeiro, RJ</p>
+            <p>📧 seu-email@exemplo.com</p>
+        </div>
+
+        <h3>Skills</h3>
+        <div class="skill-container">
+            <span>HTML / CSS</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill-container">
+            <span>JavaScript</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 50%;"></div></div>
+        </div>
+        <div class="skill-container">
+            <span>GitHub</span>
+            <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <section>
+            <h2>Sobre</h2>
+            <p>Mãe de 4 filhos, dedicada e em transição de carreira para a tecnologia. Atualmente focada em aprender desenvolvimento web através do bootcamp da DIO, aplicando disciplina e resiliência em cada projeto.</p>
+        </section>
+
+        <section>
+            <h2>Experiência</h2>
+            <div class="item">
+                <p class="data">2026 - ATUAL</p>
+                <strong>Desenvolvedora em Formação - Bootcamp DIO</strong>
+                <p>Desenvolvimento de projetos práticos utilizando HTML5, CSS3 e versionamento de código com Git.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Educação</h2>
+            <div class="item">
+                <p class="data">JAN 2026 - JUN 2026</p>
+                <strong>Digital Innovation One (DIO)</strong>
+                <p>Formação Fullstack Developer.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
