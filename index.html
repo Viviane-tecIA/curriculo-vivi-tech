@@ -3,50 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo da Viviane</title>
+    <title>Currículo - Viviane Setiba</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
-        header { text-align: center; border-bottom: 2px solid #333; }
-        h1 { margin-bottom: 5px; }
-        section { margin-top: 20px; }
-        h2 { color: #2c3e50; }
-        ul { list-style-type: square; }
-        footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #666; }
+        :root { --cor-primaria: #008b8b; --cor-fundo-lateral: #f0f0f0; --cor-texto: #333; }
+        body { font-family: sans-serif; margin: 0; display: flex; color: var(--cor-texto); }
+        .sidebar { width: 35%; background-color: var(--cor-fundo-lateral); padding: 20px; min-height: 100vh; }
+        .sidebar h1 { font-size: 18px; color: #000; text-transform: uppercase; }
+        .skill-bar { background: #ddd; height: 8px; border-radius: 5px; width: 100%; margin-bottom: 10px; }
+        .skill-progress { background: var(--cor-primaria); height: 100%; border-radius: 5px; }
+        .main-content { width: 65%; padding: 25px; background: #fff; }
+        h2 { border-bottom: 2px solid #eee; color: var(--cor-primaria); font-size: 20px; padding-bottom: 5px; margin-top: 20px; }
+        p { line-height: 1.5; font-size: 14px; }
+        .contato { font-size: 13px; margin-bottom: 15px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Viviane</h1>
-        <p>Desenvolvedora Front-End em Formação | Especialista em Organização</p>
-    </header>
+    <aside class="sidebar">
+        <h1>VIVIANE SETIBA</h1>
+        <p class="contato">💼 Fullstack Developer em Formação</p>
+        <p class="contato">📍 São Gonçalo, Rio de Janeiro</p>
+        <p class="contato">📧 v16cursos@gmail.com</p>
 
-    <section>
-        <h2>Sobre Mim</h2>
-        <p>Mãe de 4 filhos e profissional em transição de carreira para a área de tecnologia. Minha rotina me deu habilidades únicas de multitarefa, gestão de tempo e resiliência, que agora aplico no desenvolvimento de soluções digitais criativas e funcionais.</p>
-    </section>
+        <h3>Minhas Skills</h3>
+        <span>HTML5 / CSS3</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        <span>GitHub / Git</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+        <span>Organização</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 100%;"></div></div>
+    </aside>
 
-    <section>
-        <h2>Meus Projetos (GitHub)</h2>
-        <ul>
-            <li><strong>Caixa Família App:</strong> Organização financeira doméstica.</li>
-            <li><strong>Meu Primeiro Projeto de Moda:</strong> Onde uno estética e tecnologia.</li>
-            <li><strong>AI Career Global Path:</strong> Planejamento estratégico de carreira.</li>
-            <li><strong>Mapa de Habilidades IA:</strong> Roadmap de aprendizado técnico.</li>
-        </ul>
-    </section>
+    <main class="main-content">
+        <section>
+            <h2>Sobre Mim</h2>
+            <p>Mãe dedicada de 4 filhos, possuo uma habilidade natural para organização e gestão de tempo. Estou em transição de carreira para a área de tecnologia, focada em aprender desenvolvimento Web através do bootcamp da Digital Innovation One (DIO).</p>
+        </section>
 
-    <section>
-        <h2>Formação</h2>
-        <ul>
-            <li>Cursos de Tecnologia e IA - Digital Innovation One (DIO)</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Educação</h2>
+            <strong>Digital Innovation One (DIO)</strong>
+            <p>Formação Fullstack Developer - Em curso (2026)</p>
+        </section>
 
-    <footer>
-        <p><em>"Moda é identidade, código é liberdade."</em></p>
-        <p>Conecte-se comigo no GitHub: <strong>Viviane-teclA</strong></p>
-    </footer>
+        <section>
+            <h2>Destaque</h2>
+            <p><em>"A moda passa, o estilo é eterno."</em></p>
+        </section>
+    </main>
 
 </body>
 </html>
