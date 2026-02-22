@@ -3,119 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viviane Setiba - Expert 15</title>
+    <title>Viviane Setiba - Campus Expert 15</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { 
             --rosa-bebe: #FFB6C1; 
             --rosa-destaque: #FF69B4;
-            --brilho-neon: 0 0 15px rgba(255, 105, 180, 0.8);
+            --brilho: 0 0 20px rgba(255, 105, 180, 0.7);
         }
+        body { font-family: 'Poppins', sans-serif; margin: 0; display: flex; flex-direction: column; background: #FFF5F7; color: #333; }
         
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            margin: 0; 
-            display: flex; 
-            flex-direction: column; 
-            background: #FFF5F7; 
-            color: #333; 
-        }
-
-        /* Sidebar com Efeito de Vidro */
-        .sidebar { 
-            width: 100%; 
-            background: white;
-            padding: 30px 15px; 
-            box-sizing: border-box; 
-            border-bottom: 5px solid var(--rosa-bebe);
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
+        /* Sidebar Ajustada */
+        .sidebar { width: 100%; background: white; padding: 30px 15px; box-sizing: border-box; border-bottom: 5px solid var(--rosa-bebe); text-align: center; }
+        
+        /* Foto da Embaixadora com Brilho */
         .foto-perfil {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 4px solid var(--rosa-destaque);
-            box-shadow: var(--brilho-neon);
-            object-fit: cover;
-            margin: 0 auto 15px;
-            display: block;
-            animation: flutuar 3s ease-in-out infinite;
-        }
-
-        @keyframes flutuar {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        /* Ajuste do E-mail para Celular */
-        .contato-info { 
-            font-size: 13px; 
-            color: #666;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            max-width: 260px;
-            margin: 10px auto;
+            width: 160px; height: 160px; border-radius: 50%;
+            border: 4px solid var(--rosa-destaque); box-shadow: var(--brilho);
+            object-fit: cover; margin: 0 auto 15px; display: block;
         }
 
         .badge-expert { 
             background: linear-gradient(90deg, #FF69B4, #FFB6C1);
             color: white; padding: 12px 20px; border-radius: 25px;
-            font-weight: bold; margin: 20px 0;
-            box-shadow: var(--brilho-neon);
-            display: inline-block;
-            font-size: 14px;
+            font-weight: bold; margin: 15px 0; box-shadow: var(--brilho);
+            display: inline-block; font-size: 14px;
         }
 
-        /* Botões Neon */
-        .btn-container { display: flex; justify-content: center; gap: 10px; margin-top: 15px; }
-        
-        .btn-link {
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            color: white;
-            transition: 0.3s;
-            font-size: 12px;
+        /* Correção do E-mail para Celular */
+        .contato-info { 
+            font-size: 13px; color: #666; word-wrap: break-word; 
+            overflow-wrap: break-word; max-width: 280px; margin: 10px auto; 
         }
 
-        .btn-linkedin { background: #0077b5; box-shadow: 0 0 15px rgba(0, 119, 181, 0.5); }
-        .btn-email { background: var(--rosa-destaque); box-shadow: var(--brilho-neon); }
+        .btn-acao {
+            display: inline-block; padding: 10px 20px; border-radius: 50px;
+            text-decoration: none; font-weight: bold; color: white;
+            margin: 5px; font-size: 12px; transition: 0.3s;
+        }
+        .btn-linkedin { background: #0077b5; box-shadow: 0 0 15px rgba(0,119,181,0.5); }
+        .btn-email { background: var(--rosa-destaque); box-shadow: var(--brilho); }
 
-        /* Conteúdo Principal */
+        /* Conteúdo */
         .main-content { width: 100%; padding: 25px; box-sizing: border-box; }
-
-        h2 { 
-            color: var(--rosa-destaque); 
-            border-left: 5px solid var(--rosa-bebe);
-            padding-left: 10px;
-            font-size: 18px;
-            margin-top: 30px;
+        .card { 
+            background: white; padding: 20px; border-radius: 15px; 
+            margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            border-left: 5px solid var(--rosa-destaque);
         }
-
-        .card {
-            background: white;
-            padding: 15px;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-            border: 1px solid rgba(255, 182, 193, 0.3);
-        }
-
-        .tag {
-            font-size: 10px;
-            background: var(--rosa-bebe);
-            color: white;
-            padding: 3px 8px;
-            border-radius: 10px;
-            margin-right: 5px;
-        }
+        h2 { color: var(--rosa-destaque); font-size: 18px; border-bottom: 2px solid var(--rosa-bebe); padding-bottom: 10px; }
+        
+        .link-projeto { color: var(--rosa-destaque); font-weight: bold; text-decoration: underline; font-size: 14px; }
 
         @media (min-width: 768px) {
             body { flex-direction: row; }
-            .sidebar { width: 35%; min-height: 100vh; border-bottom: none; border-right: 5px solid var(--rosa-bebe); position: sticky; top: 0; }
+            .sidebar { width: 35%; min-height: 100vh; border-bottom: none; border-right: 5px solid var(--rosa-bebe); }
             .main-content { width: 65%; }
         }
     </style>
@@ -125,8 +67,8 @@
     <aside class="sidebar">
         <img src="https://avatars.githubusercontent.com/u/196614486?v=4" alt="Viviane Setiba" class="foto-perfil">
         
-        <h1 style="color: var(--rosa-destaque); margin: 10px 0 5px;">Viviane Setiba</h1>
-        <div class="badge-expert">✨ CAMPUS EXPERT 15 ✨</div>
+        <h1 style="color: var(--rosa-destaque); margin: 10px 0;">Viviane Setiba</h1>
+        <div class="badge-expert">💎 CAMPUS EXPERT #15</div>
         
         <div class="contato-info">
             <p>📍 São Gonçalo, Rio de Janeiro</p>
@@ -134,9 +76,9 @@
             <p>👩‍💻 Fullstack Developer em Formação</p>
         </div>
 
-        <div class="btn-container">
-            <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-link btn-linkedin">LinkedIn</a>
-            <a href="mailto:v16cursos@gmail.com" class="btn-link btn-email">E-mail</a>
+        <div style="margin-top: 15px;">
+            <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-acao btn-linkedin">LinkedIn</a>
+            <a href="mailto:v16cursos@gmail.com" class="btn-acao btn-email">E-mail</a>
         </div>
     </aside>
 
@@ -144,39 +86,39 @@
         <section>
             <h2>Sobre a Expert</h2>
             <div class="card">
-                <p>Mãe de 4 filhos e líder nata, transformando o futuro através da tecnologia na <strong>DIO</strong> — a maior plataforma de ensino tech da América Latina.</p>
+                <p>Mãe de 4 filhos e líder nata, transformando o futuro através da tecnologia na <strong>DIO</strong>.</p>
             </div>
         </section>
 
         <section>
             <h2>Educação & Diplomas</h2>
             <div class="card">
-                <p>🎓 <strong>Ensino Fundamental Completo</strong></p>
-                <p>💻 <strong>Digital Innovation One (DIO)</strong>: Formação Fullstack Developer (Em curso - 2026).</p>
-                <p>🥇 <strong>Certificado de Embaixadora Expert 15</strong>.</p>
+                <p>🎓 Ensino Fundamental Completo</p>
+                <p>💻 <strong>DIO:</strong> Formação Fullstack Developer (Em curso - 2026).</p>
+                <p>🥇 <strong>Certificado:</strong> Embaixadora Campus Expert 15.</p>
             </div>
         </section>
 
         <section>
-            <h2>Portfólio de Projetos</h2>
+            <h2>Projetos (Links do GitHub)</h2>
             <div class="card">
                 🚀 <strong>Currículo Tech Rosa</strong><br>
-                <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Design Neon</span>
-                <p>Interface responsiva e moderna para apresentação profissional.</p>
+                Design Glamour com Neon e Glassmorphism.<br>
+                <a href="https://github.com/Viviane-tecIA/curriculo-vivi-tech.git" class="link-projeto" target="_blank">Aceder ao Projeto</a>
             </div>
             <div class="card">
                 🏠 <strong>Caixa Família App</strong><br>
-                <span class="tag">Lógica</span><span class="tag">UX Design</span>
-                <p>Solução para organização e gestão de recursos familiares.</p>
+                Gestão e organização de recursos familiares.<br>
+                <a href="https://github.com/Viviane-tecIA" class="link-projeto" target="_blank">Ver no GitHub</a>
             </div>
             <div class="card">
                 🤖 <strong>Mapa de Habilidades IA</strong><br>
-                <span class="tag">IA</span><span class="tag">Prompt Engineering</span>
-                <p>Estrutura de competências para o mercado global de tecnologia.</p>
+                Estruturação de competências para o mercado tech.<br>
+                <a href="https://github.com/Viviane-tecIA" class="link-projeto" target="_blank">Ver no GitHub</a>
             </div>
         </section>
-
-        <p style="text-align: center; margin-top: 50px; font-style: italic; color: var(--rosa-destaque);">
+        
+        <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--rosa-destaque);">
             "A moda passa, o estilo é eterno." 💗🍷
         </p>
     </main>
