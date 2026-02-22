@@ -1,113 +1,149 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Viviane Setiba</title>
+    <title>Viviane Setiba - Expert 15</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { 
             --rosa-bebe: #FFB6C1; 
             --rosa-destaque: #FF69B4;
-            --fundo-suave: #FFF5F7;
+            --vidro: rgba(255, 255, 255, 0.2);
         }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; display: flex; background-color: var(--fundo-suave); color: #333; }
-        .sidebar { width: 35%; background-color: #fff; padding: 20px; height: 100vh; box-sizing: border-box; border-right: 4px solid var(--rosa-bebe); position: sticky; top: 0; }
-        .sidebar h1 { font-size: 22px; color: var(--rosa-destaque); margin-bottom: 5px; }
-        .main-content { width: 65%; padding: 25px; background: white; box-sizing: border-box; }
-        .skill-bar { background: #ffe4e1; height: 10px; border-radius: 5px; margin: 5px 0 15px; }
-        .skill-progress { background: var(--rosa-bebe); height: 100%; border-radius: 5px; }
-        h2 { border-bottom: 2px solid var(--rosa-bebe); color: var(--rosa-destaque); padding-bottom: 5px; margin-top: 20px; text-transform: uppercase; font-size: 18px; }
-        .contato { font-size: 13px; margin-bottom: 10px; color: #666; }
-        a { color: var(--rosa-destaque); text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-        .badge-expert { background: linear-gradient(135deg, var(--rosa-bebe), var(--rosa-destaque)); color: white; padding: 15px; border-radius: 15px; font-weight: bold; text-align: center; margin-bottom: 25px; border: none; box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); font-size: 18px; }
-        .lista-projetos { list-style: none; padding: 0; }
-        .lista-projetos li { margin-bottom: 15px; padding: 12px; border: 1px solid var(--rosa-bebe); border-radius: 8px; background-color: #fffafb; transition: 0.3s; }
-        .lista-projetos li:hover { transform: scale(1.02); box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
-        .tech-tag { font-size: 11px; background: var(--rosa-bebe); color: #fff; padding: 2px 8px; border-radius: 10px; margin-top: 5px; display: inline-block; }
-        .btn-linkedin { display: block; background: #0077b5; color: white; text-align: center; padding: 10px; border-radius: 5px; margin-top: 20px; text-decoration: none; }
+        
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            display: flex; 
+            background: linear-gradient(135deg, #FFF5F7 0%, #ffe4e1 100%); 
+            color: #333; 
+            min-height: 100vh;
+        }
+
+        /* Sidebar com efeito de Vidro */
+        .sidebar { 
+            width: 35%; 
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 30px 20px; 
+            box-sizing: border-box; 
+            border-right: 1px solid rgba(255, 182, 193, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .foto-perfil {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--rosa-destaque);
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            object-fit: cover;
+            animation: flutuar 3s ease-in-out infinite;
+        }
+
+        @keyframes flutuar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .badge-expert { 
+            background: linear-gradient(90deg, #FF69B4, #FFB6C1);
+            color: white; 
+            padding: 15px; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            text-align: center; 
+            margin-bottom: 25px; 
+            font-size: 14px;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+            animation: brilho 2s infinite;
+        }
+
+        @keyframes brilho {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; transform: scale(1.02); }
+            100% { opacity: 0.8; }
+        }
+
+        .main-content { width: 65%; padding: 40px; box-sizing: border-box; overflow-y: auto; }
+
+        .card-projeto {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--rosa-bebe);
+            transition: 0.3s;
+        }
+
+        .card-projeto:hover {
+            transform: translateX(10px);
+            background: white;
+            box-shadow: 0 10px 20px rgba(255, 182, 193, 0.3);
+        }
+
+        .btn-link {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-linkedin { background: #0077b5; color: white; }
+        .btn-email { background: var(--rosa-destaque); color: white; margin-left: 10px; }
+
+        h1, h2 { color: var(--rosa-destaque); text-transform: uppercase; letter-spacing: 2px; }
+        .contato { font-size: 13px; text-align: center; margin-top: 15px; line-height: 1.6; }
     </style>
 </head>
 <body>
 
     <aside class="sidebar">
-        <h1>VIVIANE SETIBA</h1>
-        <p class="contato">📍 São Gonçalo, Rio de Janeiro</p>
-        <p class="contato">📧 v16cursos@gmail.com</p>
-        <p class="contato">👩‍💻 Fullstack Developer em Formação</p>
+        <img src="https://raw.githubusercontent.com/Viviane-tecIA/curriculo-vivi-tech/main/foto-viviane.png" class="foto-perfil">
+        <h1>Viviane Setiba</h1>
+        <div class="badge-expert">💎 DIO CAMPUS EXPERT #15</div>
         
-        <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-linkedin">🔗 Conectar no LinkedIn</a>
+        <div class="contato">
+            <p>📍 São Gonçalo, RJ</p>
+            <p>📧 v16cursos@gmail.com</p>
+        </div>
 
-        <h2>Minhas Skills</h2>
-        <span>HTML5 / CSS3</span>
-        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-        
-        <span>GitHub / Git</span>
-        <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-        
-        <span>Inteligência Artificial</span>
-        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-
-        <span>Organização de Elite</span>
-        <div class="skill-bar"><div class="skill-progress" style="width: 100%;"></div></div>
+        <div style="margin-top: 20px;">
+            <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-link btn-linkedin">LinkedIn</a>
+            <a href="mailto:v16cursos@gmail.com" class="btn-link btn-email">E-mail</a>
+        </div>
     </aside>
 
     <main class="main-content">
-        <section>
-            <div class="badge-expert">✨ EMBAIXADORA DIO CAMPUS EXPERT 15 ✨</div>
-            <h2>Sobre Mim</h2>
-            <p>
-                Mãe de 4 filhos e líder nata, estou transformando minha carreira através da tecnologia. Como <strong>Embaixadora Campus Expert 15</strong> na <strong>DIO</strong> — a maior plataforma de ensino tech da América Latina — minha missão é inspirar e conectar pessoas ao futuro digital.
-            </p>
-        </section>
+        <h2>Sobre a Expert</h2>
+        <p>Mãe de 4 filhos e líder nata, transformando o futuro na maior plataforma de educação tech impulsionada por IA da América Latina: a <strong>DIO</strong>.</p>
 
-        <section>
-            <h2>Educação Profissional</h2>
-            <p>🎓 <strong>Ensino Fundamental Completo</strong></p>
-            <p>💻 <strong>Digital Innovation One (DIO):</strong> Formação Fullstack Developer (Em curso - 2026). Foco em tecnologias modernas e soluções escaláveis.</p>
-        </section>
+        <h2>Projetos em Destaque</h2>
+        <div class="card-projeto">
+            🚀 <strong>Currículo Tech Rosa</strong><br>
+            Design responsivo com efeitos de Glassmorphism e animações modernas.
+        </div>
+        <div class="card-projeto">
+            🤖 <strong>Mapa de Habilidades IA</strong><br>
+            Curadoria de competências para o mercado de inteligência artificial.
+        </div>
+        <div class="card-projeto">
+            🏠 <strong>Caixa Família App</strong><br>
+            Organização digital para gestão eficiente do lar.
+        </div>
 
-        <section>
-            <h2>Portfólio de Projetos (GitHub)</h2>
-            <ul class="lista-projetos">
-                <li>
-                    🚀 <strong><a href="https://github.com/Viviane-tecIA/curriculo-vivi-tech.git" target="_blank">Currículo Tech Rosa</a></strong><br>
-                    Desenvolvimento de interface responsiva e estilização personalizada.<br>
-                    <span class="tech-tag">HTML5</span> <span class="tech-tag">CSS3</span> <span class="tech-tag">Git</span>
-                </li>
-                <li>
-                    🤖 <strong><a href="https://github.com/Viviane-tecIA/mapa-de-habilidades-ia.git" target="_blank">Mapa de Habilidades IA</a></strong><br>
-                    Estruturação de competências para o mercado de Inteligência Artificial.<br>
-                    <span class="tech-tag">IA</span> <span class="tech-tag">Prompt Engineering</span>
-                </li>
-                <li>
-                    🏠 <strong><a href="https://github.com/Viviane-tecIA/caixa-familia-app.git" target="_blank">Caixa Família App</a></strong><br>
-                    Solução digital para organização e gestão de recursos familiares.<br>
-                    <span class="tech-tag">Lógica</span> <span class="tech-tag">UX Design</span>
-                </li>
-                <li>
-                    👗 <strong><a href="https://github.com/Viviane-tecIA/meu-primeiro-projeto-moda.git" target="_blank">Moda Tech Project</a></strong><br>
-                    Interface criativa unindo o universo fashion ao desenvolvimento web.<br>
-                    <span class="tech-tag">Design</span> <span class="tech-tag">Frontend</span>
-                </li>
-                <li>
-                    🌍 <strong><a href="https://github.com/Viviane-tecIA/AI-Career-Global-Path.git" target="_blank">AI Career Global Path</a></strong><br>
-                    Mapeamento de carreira internacional com suporte de IA.<br>
-                    <span class="tech-tag">Carreira Global</span> <span class="tech-tag">IA</span>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Reconhecimentos</h2>
-            <p>🥇 <a href="https://hermes.dio.me/certificates/5G8I0IVH.pdf" target="_blank">Certificado de Embaixadora Expert 15</a></p>
-            <p>✅ <a href="https://hermes.dio.me/certificates/7STBHQHM.pdf" target="_blank">Fundamentos de Desenvolvimento</a></p>
-        </section>
-
-        <section style="text-align: center; margin-top: 40px;">
-            <p><i>"A moda passa, o estilo é eterno."</i> 💗🍷</p>
-            <p><strong>Vamos construir o futuro juntas? Contate-me!</strong></p>
-        </section>
+        <p align="center" style="margin-top: 50px; font-style: italic; color: var(--rosa-destaque);">
+            "A moda passa, o estilo é eterno." 💗🍷
+        </p>
     </main>
 
 </body>
