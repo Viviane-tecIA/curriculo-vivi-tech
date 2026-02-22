@@ -11,17 +11,21 @@
             --fundo-suave: #FFF5F7;
         }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; display: flex; background-color: var(--fundo-suave); color: #333; }
-        .sidebar { width: 35%; background-color: #fff; padding: 20px; height: 100vh; box-sizing: border-box; border-right: 4px solid var(--rosa-bebe); }
+        .sidebar { width: 35%; background-color: #fff; padding: 20px; height: 100vh; box-sizing: border-box; border-right: 4px solid var(--rosa-bebe); position: sticky; top: 0; }
         .sidebar h1 { font-size: 22px; color: var(--rosa-destaque); margin-bottom: 5px; }
-        .main-content { width: 65%; padding: 25px; background: white; box-sizing: border-box; overflow-y: auto; }
+        .main-content { width: 65%; padding: 25px; background: white; box-sizing: border-box; }
         .skill-bar { background: #ffe4e1; height: 10px; border-radius: 5px; margin: 5px 0 15px; }
         .skill-progress { background: var(--rosa-bebe); height: 100%; border-radius: 5px; }
         h2 { border-bottom: 2px solid var(--rosa-bebe); color: var(--rosa-destaque); padding-bottom: 5px; margin-top: 20px; text-transform: uppercase; font-size: 18px; }
         .contato { font-size: 13px; margin-bottom: 10px; color: #666; }
         a { color: var(--rosa-destaque); text-decoration: none; font-weight: bold; }
-        .badge-expert { background: var(--rosa-bebe); color: white; padding: 12px; border-radius: 12px; font-weight: bold; text-align: center; margin-bottom: 20px; border: 1px solid var(--rosa-destaque); box-shadow: 2px 2px 8px rgba(0,0,0,0.1); }
-        .lista-certificados { list-style: none; padding: 0; }
-        .lista-certificados li { margin-bottom: 10px; font-size: 14px; border-left: 4px solid var(--rosa-bebe); padding-left: 10px; }
+        a:hover { text-decoration: underline; }
+        .badge-expert { background: linear-gradient(135deg, var(--rosa-bebe), var(--rosa-destaque)); color: white; padding: 15px; border-radius: 15px; font-weight: bold; text-align: center; margin-bottom: 25px; border: none; box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); font-size: 18px; }
+        .lista-projetos { list-style: none; padding: 0; }
+        .lista-projetos li { margin-bottom: 15px; padding: 12px; border: 1px solid var(--rosa-bebe); border-radius: 8px; background-color: #fffafb; transition: 0.3s; }
+        .lista-projetos li:hover { transform: scale(1.02); box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
+        .tech-tag { font-size: 11px; background: var(--rosa-bebe); color: #fff; padding: 2px 8px; border-radius: 10px; margin-top: 5px; display: inline-block; }
+        .btn-linkedin { display: block; background: #0077b5; color: white; text-align: center; padding: 10px; border-radius: 5px; margin-top: 20px; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -31,6 +35,8 @@
         <p class="contato">📍 São Gonçalo, Rio de Janeiro</p>
         <p class="contato">📧 v16cursos@gmail.com</p>
         <p class="contato">👩‍💻 Fullstack Developer em Formação</p>
+        
+        <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-linkedin">🔗 Conectar no LinkedIn</a>
 
         <h2>Minhas Skills</h2>
         <span>HTML5 / CSS3</span>
@@ -39,51 +45,68 @@
         <span>GitHub / Git</span>
         <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
         
-        <span>Organização e Resiliência</span>
+        <span>Inteligência Artificial</span>
+        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+
+        <span>Organização de Elite</span>
         <div class="skill-bar"><div class="skill-progress" style="width: 100%;"></div></div>
     </aside>
 
     <main class="main-content">
         <section>
-            <div class="badge-expert">👠 EMBAIXADORA CAMPUS EXPERT 15 - DIO</div>
+            <div class="badge-expert">✨ EMBAIXADORA DIO CAMPUS EXPERT 15 ✨</div>
             <h2>Sobre Mim</h2>
             <p>
-                Sou mãe de 4 filhos e estou em um processo intenso de transição de carreira para a tecnologia. Como <strong>Embaixadora Campus Expert 15 na DIO</strong>, atuo dentro da melhor e mais completa plataforma de ensino tecnológico da América Latina. Minha jornada é movida por um desejo inabalável de evolução e pela excelência em cada projeto que desenvolvo.
+                Mãe de 4 filhos e líder nata, estou transformando minha carreira através da tecnologia. Como <strong>Embaixadora Campus Expert 15</strong> na <strong>DIO</strong> — a maior plataforma de ensino tech da América Latina — minha missão é inspirar e conectar pessoas ao futuro digital.
             </p>
         </section>
 
         <section>
-            <h2>Educação e Formação</h2>
-            <p><strong>Ensino Fundamental Completo</strong></p>
-            <p>
-                <strong>Digital Innovation One (DIO):</strong> Atualmente cursando a Formação Fullstack Developer (2026). 
-                Capacito-me na instituição que é referência internacional em educação tech, desenvolvendo habilidades reais para transformar o futuro.
-            </p>
+            <h2>Educação Profissional</h2>
+            <p>🎓 <strong>Ensino Fundamental Completo</strong></p>
+            <p>💻 <strong>Digital Innovation One (DIO):</strong> Formação Fullstack Developer (Em curso - 2026). Foco em tecnologias modernas e soluções escaláveis.</p>
         </section>
 
         <section>
-            <h2>Minhas Conquistas na DIO</h2>
-            <p><a href="https://hermes.dio.me/certificates/5G8I0IVH.pdf" target="_blank">🏆 Certificado Oficial: Campus Expert 15</a></p>
-            <ul class="lista-certificados">
-                <li>🌸 <a href="https://hermes.dio.me/certificates/7STBHQHM.pdf" target="_blank">Fundamentos de Desenvolvimento</a></li>
-                <li>🌸 <a href="https://hermes.dio.me/certificates/OJZXUEDY.pdf" target="_blank">Evolução e Prática Tech</a></li>
-                <li>🌸 <a href="https://hermes.dio.me/certificates/N9OFEERC.pdf" target="_blank">Domínio de Ferramentas e Lógica</a></li>
-                <li>🌸 <a href="https://hermes.dio.me/certificates/ZCUHNSJO.pdf" target="_blank">Especialização em Frontend</a></li>
-                <li>🌸 <a href="https://hermes.dio.me/certificates/YMRQQU6Q.pdf" target="_blank">Desenvolvimento Ágil</a></li>
-                <li>🌸 <a href="https://hermes.dio.me/certificates/VO715CHD.pdf" target="_blank">Arquitetura de Sistemas</a></li>
-                <li>🌸 <a href="https://hermes.dio.me/certificates/O5DHWKUJ.pdf" target="_blank">Integração e Versionamento</a></li>
-                <li>🌸 <a href="https://hermes.dio.me/certificates/FGDWLR9I.pdf" target="_blank">Projetos Fullstack</a></li>
-                <li>🌸 <a href="https://hermes.dio.me/certificates/W9H7OJB6.pdf" target="_blank">Aperfeiçoamento Contínuo</a></li>
+            <h2>Portfólio de Projetos (GitHub)</h2>
+            <ul class="lista-projetos">
+                <li>
+                    🚀 <strong><a href="https://github.com/Viviane-tecIA/curriculo-vivi-tech.git" target="_blank">Currículo Tech Rosa</a></strong><br>
+                    Desenvolvimento de interface responsiva e estilização personalizada.<br>
+                    <span class="tech-tag">HTML5</span> <span class="tech-tag">CSS3</span> <span class="tech-tag">Git</span>
+                </li>
+                <li>
+                    🤖 <strong><a href="https://github.com/Viviane-tecIA/mapa-de-habilidades-ia.git" target="_blank">Mapa de Habilidades IA</a></strong><br>
+                    Estruturação de competências para o mercado de Inteligência Artificial.<br>
+                    <span class="tech-tag">IA</span> <span class="tech-tag">Prompt Engineering</span>
+                </li>
+                <li>
+                    🏠 <strong><a href="https://github.com/Viviane-tecIA/caixa-familia-app.git" target="_blank">Caixa Família App</a></strong><br>
+                    Solução digital para organização e gestão de recursos familiares.<br>
+                    <span class="tech-tag">Lógica</span> <span class="tech-tag">UX Design</span>
+                </li>
+                <li>
+                    👗 <strong><a href="https://github.com/Viviane-tecIA/meu-primeiro-projeto-moda.git" target="_blank">Moda Tech Project</a></strong><br>
+                    Interface criativa unindo o universo fashion ao desenvolvimento web.<br>
+                    <span class="tech-tag">Design</span> <span class="tech-tag">Frontend</span>
+                </li>
+                <li>
+                    🌍 <strong><a href="https://github.com/Viviane-tecIA/AI-Career-Global-Path.git" target="_blank">AI Career Global Path</a></strong><br>
+                    Mapeamento de carreira internacional com suporte de IA.<br>
+                    <span class="tech-tag">Carreira Global</span> <span class="tech-tag">IA</span>
+                </li>
             </ul>
         </section>
 
-        <section id="projetos">
-            <h2>Portfólio de Projetos</h2>
-            <p><i>Aguardando o upload dos projetos práticos que validam minha expertise técnica...</i> 🚀</p>
+        <section>
+            <h2>Reconhecimentos</h2>
+            <p>🥇 <a href="https://hermes.dio.me/certificates/5G8I0IVH.pdf" target="_blank">Certificado de Embaixadora Expert 15</a></p>
+            <p>✅ <a href="https://hermes.dio.me/certificates/7STBHQHM.pdf" target="_blank">Fundamentos de Desenvolvimento</a></p>
         </section>
 
-        <section>
-            <p align="center"><i>"A moda passa, o estilo é eterno."</i> 💗🍷</p>
+        <section style="text-align: center; margin-top: 40px;">
+            <p><i>"A moda passa, o estilo é eterno."</i> 💗🍷</p>
+            <p><strong>Vamos construir o futuro juntas? Contate-me!</strong></p>
         </section>
     </main>
 
