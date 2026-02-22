@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,112 +9,105 @@
         :root { 
             --rosa-bebe: #FFB6C1; 
             --rosa-destaque: #FF69B4;
-            --vidro: rgba(255, 255, 255, 0.2);
+            --neon-brilho: 0 0 15px #FF69B4;
         }
         
         body { 
             font-family: 'Poppins', sans-serif; 
             margin: 0; 
             display: flex; 
-            background: linear-gradient(135deg, #FFF5F7 0%, #ffe4e1 100%); 
+            flex-direction: column; /* Ajuste para mobile */
+            background: #FFF5F7; 
             color: #333; 
-            min-height: 100vh;
         }
 
-        /* Sidebar com efeito de Vidro */
         .sidebar { 
-            width: 35%; 
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(10px);
-            padding: 30px 20px; 
+            width: 100%; /* Ocupa tudo no celular */
+            background: white;
+            padding: 20px; 
             box-sizing: border-box; 
-            border-right: 1px solid rgba(255, 182, 193, 0.5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            border-bottom: 4px solid var(--rosa-bebe);
+            text-align: center;
         }
 
+        /* Foto corrigida - link direto do seu GitHub */
         .foto-perfil {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 4px solid var(--rosa-destaque);
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            box-shadow: var(--neon-brilho);
             object-fit: cover;
-            animation: flutuar 3s ease-in-out infinite;
+            margin: 0 auto 15px;
+            display: block;
         }
 
-        @keyframes flutuar {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .contato { 
+            font-size: 14px; 
+            word-wrap: break-word; /* FORÇA O E-MAIL A QUEBRAR A LINHA */
+            overflow-wrap: break-word;
+            max-width: 100%;
+            color: #666;
+            margin: 10px 0;
         }
 
-        .badge-expert { 
-            background: linear-gradient(90deg, #FF69B4, #FFB6C1);
-            color: white; 
-            padding: 15px; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            text-align: center; 
-            margin-bottom: 25px; 
-            font-size: 14px;
-            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
-            animation: brilho 2s infinite;
-        }
-
-        @keyframes brilho {
-            0% { opacity: 0.8; }
-            50% { opacity: 1; transform: scale(1.02); }
-            100% { opacity: 0.8; }
-        }
-
-        .main-content { width: 65%; padding: 40px; box-sizing: border-box; overflow-y: auto; }
-
-        .card-projeto {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(5px);
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            border: 1px solid var(--rosa-bebe);
-            transition: 0.3s;
-        }
-
-        .card-projeto:hover {
-            transform: translateX(10px);
-            background: white;
-            box-shadow: 0 10px 20px rgba(255, 182, 193, 0.3);
-        }
-
+        /* Botões com Brilho Neon */
         .btn-link {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 12px;
-            margin-top: 10px;
+            color: white;
+            margin: 5px;
+            box-shadow: var(--neon-brilho); /* Brilho neon aqui */
             transition: 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
-        .btn-linkedin { background: #0077b5; color: white; }
-        .btn-email { background: var(--rosa-destaque); color: white; margin-left: 10px; }
+        .btn-linkedin { background: #0077b5; box-shadow: 0 0 15px #0077b5; }
+        .btn-email { background: var(--rosa-destaque); }
 
-        h1, h2 { color: var(--rosa-destaque); text-transform: uppercase; letter-spacing: 2px; }
-        .contato { font-size: 13px; text-align: center; margin-top: 15px; line-height: 1.6; }
+        .btn-link:hover { transform: scale(1.1); filter: brightness(1.2); }
+
+        .badge-expert { 
+            background: linear-gradient(90deg, #FF69B4, #FFB6C1);
+            color: white; padding: 10px; border-radius: 15px;
+            font-weight: bold; margin: 15px 0;
+            box-shadow: var(--neon-brilho);
+        }
+
+        .main-content { width: 100%; padding: 20px; box-sizing: border-box; }
+
+        .card-projeto {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--rosa-destaque);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        @media (min-width: 768px) {
+            body { flex-direction: row; }
+            .sidebar { width: 35%; height: 100vh; border-bottom: none; border-right: 4px solid var(--rosa-bebe); }
+            .main-content { width: 65%; }
+        }
     </style>
 </head>
 <body>
 
     <aside class="sidebar">
-        <img src="https://raw.githubusercontent.com/Viviane-tecIA/curriculo-vivi-tech/main/foto-viviane.png" class="foto-perfil">
-        <h1>Viviane Setiba</h1>
-        <div class="badge-expert">💎 DIO CAMPUS EXPERT #15</div>
+        <img src="https://github.com/Viviane-tecIA.png" class="foto-perfil">
+        
+        <h1 style="color: var(--rosa-destaque); font-size: 22px;">Viviane Setiba</h1>
+        
+        <div class="badge-expert">✨ CAMPUS EXPERT 15 ✨</div>
         
         <div class="contato">
             <p>📍 São Gonçalo, RJ</p>
-            <p>📧 v16cursos@gmail.com</p>
-        </div>
+            <p>📧 v16cursos@gmail.com</p> </div>
 
         <div style="margin-top: 20px;">
             <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-link btn-linkedin">LinkedIn</a>
@@ -124,24 +116,14 @@
     </aside>
 
     <main class="main-content">
-        <h2>Sobre a Expert</h2>
-        <p>Mãe de 4 filhos e líder nata, transformando o futuro na maior plataforma de educação tech impulsionada por IA da América Latina: a <strong>DIO</strong>.</p>
+        <h2 style="color: var(--rosa-destaque);">Sobre a Expert</h2>
+        <p>Mãe de 4 filhos e líder em transição de carreira na <strong>DIO</strong>.</p>
 
-        <h2>Projetos em Destaque</h2>
-        <div class="card-projeto">
-            🚀 <strong>Currículo Tech Rosa</strong><br>
-            Design responsivo com efeitos de Glassmorphism e animações modernas.
-        </div>
-        <div class="card-projeto">
-            🤖 <strong>Mapa de Habilidades IA</strong><br>
-            Curadoria de competências para o mercado de inteligência artificial.
-        </div>
-        <div class="card-projeto">
-            🏠 <strong>Caixa Família App</strong><br>
-            Organização digital para gestão eficiente do lar.
-        </div>
+        <h2 style="color: var(--rosa-destaque);">Projetos</h2>
+        <div class="card-projeto">🚀 <strong>Currículo Tech Rosa</strong>: Design Neon e Responsivo.</div>
+        <div class="card-projeto">🏠 <strong>Caixa Família App</strong>: Gestão familiar inteligente.</div>
 
-        <p align="center" style="margin-top: 50px; font-style: italic; color: var(--rosa-destaque);">
+        <p align="center" style="margin-top: 30px; font-style: italic; color: var(--rosa-destaque);">
             "A moda passa, o estilo é eterno." 💗🍷
         </p>
     </main>
