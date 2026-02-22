@@ -5,50 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Viviane Setiba</title>
     <style>
-        :root { --cor-primaria: #008b8b; --cor-fundo-lateral: #f0f0f0; --cor-texto: #333; }
-        body { font-family: sans-serif; margin: 0; display: flex; color: var(--cor-texto); }
-        .sidebar { width: 35%; background-color: var(--cor-fundo-lateral); padding: 20px; min-height: 100vh; }
-        .sidebar h1 { font-size: 18px; color: #000; text-transform: uppercase; }
-        .skill-bar { background: #ddd; height: 8px; border-radius: 5px; width: 100%; margin-bottom: 10px; }
-        .skill-progress { background: var(--cor-primaria); height: 100%; border-radius: 5px; }
-        .main-content { width: 65%; padding: 25px; background: #fff; }
-        h2 { border-bottom: 2px solid #eee; color: var(--cor-primaria); font-size: 20px; padding-bottom: 5px; margin-top: 20px; }
-        p { line-height: 1.5; font-size: 14px; }
-        .contato { font-size: 13px; margin-bottom: 15px; }
+        :root { 
+            --rosa-bebe: #FFB6C1; 
+            --rosa-destaque: #FF69B4;
+            --fundo-suave: #FFF5F7;
+        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; display: flex; background-color: var(--fundo-suave); color: #333; }
+        .sidebar { width: 35%; background-color: #fff; padding: 20px; height: 100vh; box-sizing: border-box; border-right: 4px solid var(--rosa-bebe); }
+        .sidebar h1 { font-size: 22px; color: var(--rosa-destaque); margin-bottom: 5px; }
+        .main-content { width: 65%; padding: 25px; background: white; box-sizing: border-box; overflow-y: auto; }
+        .skill-bar { background: #ffe4e1; height: 10px; border-radius: 5px; margin: 5px 0 15px; }
+        .skill-progress { background: var(--rosa-bebe); height: 100%; border-radius: 5px; }
+        h2 { border-bottom: 2px solid var(--rosa-bebe); color: var(--rosa-destaque); padding-bottom: 5px; margin-top: 20px; text-transform: uppercase; font-size: 18px; }
+        .contato { font-size: 13px; margin-bottom: 10px; color: #666; }
+        a { color: var(--rosa-destaque); text-decoration: none; font-weight: bold; }
+        .badge-expert { background: var(--rosa-bebe); color: white; padding: 10px; border-radius: 10px; font-weight: bold; text-align: center; margin-bottom: 20px; border: 1px solid var(--rosa-destaque); }
+        .lista-certificados { list-style: none; padding: 0; }
+        .lista-certificados li { margin-bottom: 8px; font-size: 14px; border-left: 3px solid var(--rosa-bebe); padding-left: 10px; }
     </style>
 </head>
 <body>
 
     <aside class="sidebar">
         <h1>VIVIANE SETIBA</h1>
-        <p class="contato">💼 Fullstack Developer em Formação</p>
         <p class="contato">📍 São Gonçalo, Rio de Janeiro</p>
         <p class="contato">📧 v16cursos@gmail.com</p>
+        <p class="contato">👩‍💻 Fullstack Developer em Formação</p>
 
-        <h3>Minhas Skills</h3>
+        <h2>Minhas Skills</h2>
         <span>HTML5 / CSS3</span>
         <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        
         <span>GitHub / Git</span>
         <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-        <span>Organização</span>
+        
+        <span>Organização e Gestão</span>
         <div class="skill-bar"><div class="skill-progress" style="width: 100%;"></div></div>
     </aside>
 
     <main class="main-content">
         <section>
+            <div class="badge-expert">🌟 EMBAIXADORA CAMPUS EXPERT 15 - DIO</div>
             <h2>Sobre Mim</h2>
-            <p>Mãe dedicada de 4 filhos, possuo uma habilidade natural para organização e gestão de tempo. Estou em transição de carreira para a área de tecnologia, focada em aprender desenvolvimento Web através do bootcamp da Digital Innovation One (DIO).</p>
+            <p>
+                Sou mãe de 4 filhos e profissional em transição de carreira para a tecnologia. Minha trajetória é marcada pela resiliência e por uma capacidade única de organização. Como <strong>Embaixadora na DIO</strong>, a maior e mais influente plataforma de educação tech da América Latina, atuo na vanguarda da inovação, conectando talentos a oportunidades globais.
+            </p>
         </section>
 
         <section>
             <h2>Educação</h2>
-            <strong>Digital Innovation One (DIO)</strong>
-            <p>Formação Fullstack Developer - Em curso (2026)</p>
+            <p><strong>Ensino Fundamental Completo</strong></p>
+            <p>
+                <strong>Digital Innovation One (DIO):</strong> Atualmente cursando Formação Fullstack Developer (2026). 
+                Estudo na plataforma que é referência internacional, desenvolvendo habilidades de alto nível para o mercado de software.
+            </p>
         </section>
 
         <section>
-            <h2>Destaque</h2>
-            <p><em>"A moda passa, o estilo é eterno."</em></p>
+            <h2>Conquistas e Certificações</h2>
+            <p><a href="https://hermes.dio.me/certificates/5G8I0IVH.pdf" target="_blank">🏅 Certificado Oficial: Campus Expert 15</a></p>
+            <ul class="lista-certificados">
+                <li>🌸 <a href="https://hermes.dio.me/certificates/7STBHQHM.pdf" target="_blank">Fundamentos de Desenvolvimento</a></li>
+                <li>🌸 <a href="https://hermes.dio.me/certificates/OJZXUEDY.pdf" target="_blank">Evolução e Prática Tech</a></li>
+                <li>🌸 <a href="https://hermes.dio.me/certificates/N9OFEERC.pdf" target="_blank">Domínio de Ferramentas e Lógica</a></li>
+                <li>🌸 <a href="https://hermes.dio.me/certificates/ZCUHNSJO.pdf" target="_blank">Especialização em Frontend</a></li>
+                <li>🌸 <a href="https://hermes.dio.me/certificates/YMRQQU6Q.pdf" target="_blank">Desenvolvimento Ágil</a></li>
+                <li>🌸 <a href="https://hermes.dio.me/certificates/VO715CHD.pdf" target="_blank">Arquitetura de Sistemas</a></li>
+                <li>🌸 <a href="https://hermes.dio.me/certificates/O5DHWKUJ.pdf" target="_blank">Integração e Versionamento</a></li>
+                <li>🌸 <a href="https://hermes.dio.me/certificates/FGDWLR9I.pdf" target="_blank">Projetos Fullstack</a></li>
+                <li>🌸 <a href="https://hermes.dio.me/certificates/W9H7OJB6.pdf" target="_blank">Aperfeiçoamento Contínuo</a></li>
+            </ul>
+        </section>
+
+        <section id="projetos">
+            <h2>Meus Projetos (Em breve)</h2>
+            <p><i>Área reservada para os links dos projetos práticos que estamos desenvolvendo...</i> 🚀</p>
+        </section>
+
+        <section>
+            <p align="center"><i>"A moda passa, o estilo é eterno."</i> 💗</p>
         </section>
     </main>
 
