@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viviane Setiba - Campus Expert #15</title>
+    <title>Viviane Setiba - Campus Expert #15 | ViviTech</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { 
             --rosa-bebe: #FFB6C1; 
             --rosa-destaque: #FF69B4;
             --dourado: #D4AF37;
-            /* Efeito de Brilho Glamour */
             --brilho-rosa: 0 0 20px rgba(255, 105, 180, 0.8), 0 0 10px rgba(255, 182, 193, 0.5);
         }
-
         body { font-family: 'Poppins', sans-serif; margin: 0; display: flex; flex-direction: column; background: #FFF5F7; color: #333; line-height: 1.6; }
         
-        /* Sidebar com Efeito Glamour */
+        /* Sidebar Glamour */
         .sidebar { width: 100%; background: white; padding: 40px 20px; box-sizing: border-box; border-bottom: 5px solid var(--rosa-bebe); text-align: center; }
-        
         .foto-perfil { 
             width: 180px; height: 180px; border-radius: 50%; 
             border: 4px solid var(--rosa-destaque); 
-            box-shadow: var(--brilho-rosa); /* Brilho na foto */
+            box-shadow: var(--brilho-rosa); 
             object-fit: cover; margin: 0 auto 15px; display: block; 
         }
-
         .badge-expert { 
             background: linear-gradient(90deg, #FF69B4, #D4AF37); 
             color: white; padding: 12px 25px; border-radius: 25px; 
             font-weight: bold; margin: 15px 0; 
-            box-shadow: var(--brilho-rosa); /* Brilho no Badge */
-            display: inline-block; font-size: 14px; text-transform: uppercase;
-            border: 1px solid white;
+            box-shadow: var(--brilho-rosa); 
+            display: inline-block; font-size: 14px; text-transform: uppercase; 
+            border: 1px solid white; 
         }
-
-        .btn-acao { display: inline-block; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; color: white; margin: 10px 5px; font-size: 13px; transition: 0.3s; width: 85%; text-align: center; }
+        
+        /* Botões de Contato */
+        .btn-acao { display: inline-block; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; color: white; margin: 8px 5px; font-size: 13px; transition: 0.3s; width: 85%; text-align: center; }
         .btn-linkedin { background: #0077b5; }
         .btn-email { background: var(--rosa-destaque); box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3); }
 
@@ -44,16 +41,20 @@
         .card { background: white; padding: 25px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 6px solid var(--rosa-destaque); }
         
         h2 { color: var(--rosa-destaque); font-size: 20px; border-bottom: 2px solid var(--rosa-bebe); padding-bottom: 10px; margin-top: 0; }
-        h3 { color: #444; font-size: 16px; margin: 20px 0 5px; font-weight: 600; }
+        h3 { color: #444; font-size: 16px; margin: 20px 0 5px; font-weight: 600; text-transform: uppercase; }
 
-        /* Barras de Progresso Profissionais */
+        /* Barras de Skills */
         .skill-container { margin-bottom: 15px; }
         .skill-label { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; margin-bottom: 5px; }
         .progress-bar { background: #eee; border-radius: 10px; height: 8px; width: 100%; }
         .progress-fill { background: linear-gradient(90deg, var(--rosa-destaque), var(--dourado)); height: 100%; border-radius: 10px; }
 
-        .link-projeto { color: var(--rosa-destaque); font-weight: 600; text-decoration: none; font-size: 14px; display: block; margin-top: 10px; }
-        .desc-projeto { font-size: 12px; color: #777; margin-bottom: 5px; }
+        /* Links de Projetos e Certificados */
+        .link-item { color: var(--rosa-destaque); font-weight: 600; text-decoration: none; font-size: 14px; display: block; margin-top: 10px; transition: 0.2s; }
+        .link-item:hover { color: var(--dourado); text-decoration: underline; }
+        .desc-item { font-size: 12px; color: #777; margin-bottom: 8px; border-bottom: 1px solid #fdf2f5; padding-bottom: 5px; }
+
+        .tag-dio { background: #1a1a1a; color: #15ff00; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
 
         @media (min-width: 768px) { body { flex-direction: row; } .sidebar { width: 30%; min-height: 100vh; border-bottom: none; border-right: 5px solid var(--rosa-bebe); position: sticky; top: 0; } .main-content { width: 70%; } }
     </style>
@@ -63,72 +64,79 @@
         <img src="1771861210570 (1).png" alt="Viviane Setiba" class="foto-perfil">
         <h1 style="color: var(--rosa-destaque); margin: 10px 0; font-size: 24px;">Viviane Setiba</h1>
         <div class="badge-expert">💎 Campus Expert #15</div>
-        <p style="font-size: 13px; color: #666; margin-bottom: 20px;">📍 São Gonçalo, RJ</p>
+        <p style="font-size: 14px; color: #666; font-weight: 600;">📍 São Gonçalo, RJ - Brasil</p>
+        <p style="font-size: 13px; color: #888;">Consultora de Vendas Online</p>
         
-        <a href="mailto:v16cursos@gmail.com" class="btn-acao btn-email">📧 Enviar E-mail</a>
-        <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-acao btn-linkedin">LinkedIn Profissional</a>
+        <div style="margin-top: 20px;">
+            <a href="mailto:v16cursos@gmail.com" class="btn-acao btn-email">📧 Enviar E-mail</a>
+            <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-acao btn-linkedin">LinkedIn Profissional</a>
+        </div>
     </aside>
 
     <main class="main-content">
         <section>
-            <h2>Sobre a Expert</h2>
+            <h2>Sobre a Expert (ViviTech 2026)</h2>
             <div class="card">
-                <p>Mãe de 4 filhos e líder resiliente. Atualmente transformando a trajetória pessoal em carreira tecnológica como <strong>Campus Expert na DIO</strong>. Especialista em utilizar IA para otimizar processos e apaixonada por desenvolvimento Front-end.</p>
+                <p>Mulher divergente, mãe de 4 filhos e líder por natureza. Estou em plena transição de carreira, trazendo minha expertise de <strong>Consultora de Vendas Online</strong> para o universo tecnológico. Atualmente, sou aluna <strong>DIO Pro Vitalício</strong> na <a href="https://www.dio.me/" target="_blank" style="color:var(--rosa-destaque); font-weight:bold; text-decoration:none;">DIO</a> — a maior plataforma de educação tech da América Latina.</p>
+                <p>Como <strong>Campus Expert</strong>, atuo como ponte entre a comunidade e a inovação, focando em desenvolvimento Fullstack e Inteligência Artificial com resiliência e foco no futuro.</p>
             </div>
         </section>
 
         <section>
-            <h2>Hard Skills & Idiomas</h2>
+            <h2>Hard Skills & Evolução Tech</h2>
             <div class="card" style="border-left-color: var(--dourado);">
                 <div class="skill-container">
                     <div class="skill-label"><span>IA & Prompt Engineering</span> <span>90%</span></div>
                     <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
                 </div>
                 <div class="skill-container">
-                    <div class="skill-label"><span>HTML5</span> <span>80%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+                    <div class="skill-label"><span>HTML5 Semântico</span> <span>85%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
                 </div>
                 <div class="skill-container">
-                    <div class="skill-label"><span>CSS3</span> <span>65%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+                    <div class="skill-label"><span>CSS3 Moderno</span> <span>70%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div>
                 </div>
-                <p style="font-size: 12px; color: #888; margin-top: 15px;">
-                    <strong>Idiomas:</strong> Português (Nativo) | Inglês (Técnico para documentação)
-                </p>
+                <p style="font-size: 12px; color: #888; margin-top: 15px;"><strong>Idiomas:</strong> Português (Nativo) | Inglês (Técnico para documentação)</p>
             </div>
         </section>
 
         <section>
-            <h2>Certificações Estratégicas</h2>
+            <h2>Certificações & Conquistas DIO</h2>
             <div class="card">
-                <h3>💎 DIO Campus Expert</h3>
-                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:bfa07ac4-5e6a-493e-bd66-3fa2d0905f18" class="link-projeto" target="_blank">📜 Certificado Embaixadora Campus Expert</a>
-                
-                <h3>🚀 Inovação e IA</h3>
-                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:da617120-501f-4222-b7f9-0da835e25443" class="link-projeto" target="_blank">🎓 Diploma Desafio Caixa / Microsoft</a>
-                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:b92bd9f7-97f9-479a-99b6-1cb2312f785f" class="link-projeto" target="_blank">🤖 IA na Prática - Microsoft</a>
+                <h3>💎 Liderança Campus Expert</h3>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:bfa07ac4-5e6a-493e-bd66-3fa2d0905f18" class="link-item" target="_blank">📜 Embaixadora Campus Expert 15</a>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:ab05a06d-03b1-4a03-904c-fe8192179c9e" class="link-item" target="_blank">📜 Boas-vindas ao Programa Expert</a>
 
-                <h3>🎨 Formação Adobe Professional</h3>
-                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e3fac528-72c0-476e-8bab-4b1c46d27815" class="link-projeto" target="_blank">📄 Adobe Professional - Nível 1</a>
-                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e71692c1-2510-4e77-9e08-736133c48b38" class="link-projeto" target="_blank">📄 Adobe Professional - Nível 2</a>
+                <h3>🚀 Inovação (Caixa & Microsoft)</h3>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:da617120-501f-4222-b7f9-0da835e25443" class="link-item" target="_blank">🎓 Diploma Desafio da Caixa</a>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:b92bd9f7-97f9-479a-99b6-1cb2312f785f" class="link-item" target="_blank">🤖 Inteligência Artificial na Prática - Microsoft</a>
+
+                <h3>🎨 Adobe Professional Formação</h3>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e3fac528-72c0-476e-8bab-4b1c46d27815" class="link-item" target="_blank">📄 Adobe Professional - Nível 1</a>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e71692c1-2510-4e77-9e08-736133c48b38" class="link-item" target="_blank">📄 Adobe Professional - Nível 2</a>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:1d996d48-3a81-496a-8673-a6006e987f63" class="link-item" target="_blank">📄 Adobe Professional - Nível 3</a>
             </div>
         </section>
 
         <section>
             <h2>Projetos no GitHub</h2>
             <div class="card">
-                <a href="https://github.com/Viviane-tecIA/meu-primeiro-projeto-moda.git" class="link-projeto" target="_blank">👗 Projeto Moda & Estilo</a>
-                <p class="desc-projeto">Interface de e-commerce com foco em elegância e UX.</p>
+                <a href="https://github.com/Viviane-tecIA/meu-primeiro-projeto-moda.git" class="link-item" target="_blank">👗 Projeto Moda & Estilo</a>
+                <p class="desc-item">Desenvolvimento de e-commerce responsivo com foco em UX/UI.</p>
 
-                <a href="https://github.com/Viviane-tecIA/caixa-familia-app.git" class="link-projeto" target="_blank">🏠 Caixa Família App</a>
-                <p class="desc-projeto">Projeto de impacto social para gestão de finanças familiares.</p>
+                <a href="https://github.com/Viviane-tecIA/caixa-familia-app.git" class="link-item" target="_blank">🏠 Caixa Família App</a>
+                <p class="desc-item">Aplicação de gestão financeira para impacto social familiar.</p>
 
-                <a href="https://github.com/Viviane-tecIA/curriculo-vivi-tech.git" class="link-projeto" target="_blank">✨ Currículo Digital Glamour</a>
-                <p class="desc-projeto">Este portfólio interativo desenvolvido com HTML5 e CSS3.</p>
+                <a href="https://github.com/Viviane-tecIA/curriculo-vivi-tech.git" class="link-item" target="_blank">✨ Currículo Digital ViviTech</a>
+                <p class="desc-item">Este portfólio interativo com efeitos de brilho e alta performance.</p>
+                
+                <a href="https://github.com/Viviane-tecIA/Viviane-tecIA.git" class="link-item" target="_blank">🚀 Repositório Pessoal (Brand)</a>
+                <p class="desc-item">Central de estudos e documentação técnica da jornada DIO.</p>
             </div>
         </section>
         
-        <p style="text-align: center; font-weight: 600; color: var(--rosa-destaque);">
+        <p style="text-align: center; margin-top: 20px; font-style: italic; color: var(--rosa-destaque); font-weight: 600;">
             "A tecnologia passa, o estilo é eterno." 💗
         </p>
     </main>
