@@ -12,88 +12,65 @@
             --dourado: #D4AF37;
             --brilho-rosa: 0 0 20px rgba(255, 105, 180, 0.8), 0 0 10px rgba(255, 182, 193, 0.5);
         }
-        body { font-family: 'Poppins', sans-serif; margin: 0; display: flex; flex-direction: column; background: #FFF5F7; color: #333; line-height: 1.6; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; display: flex; flex-direction: row; background: #FFF5F7; color: #333; line-height: 1.6; }
         
-        /* Barra Lateral Glamour */
-        .sidebar { width: 100%; background: white; padding: 40px 20px; box-sizing: border-box; border-bottom: 5px solid var(--rosa-bebe); text-align: center; }
-        .foto-perfil { 
-            width: 180px; height: 180px; border-radius: 50%; 
-            border: 4px solid var(--rosa-destaque); 
-            box-shadow: var(--brilho-rosa); 
-            object-fit: cover; margin: 0 auto 15px; display: block; 
-        }
-        .badge-expert { 
-            background: linear-gradient(90deg, #FF69B4, #D4AF37); 
-            color: white; padding: 12px 25px; border-radius: 25px; 
-            font-weight: bold; margin: 15px 0; 
-            box-shadow: var(--brilho-rosa); 
-            display: inline-block; font-size: 14px; text-transform: uppercase; 
-            border: 1px solid white; 
-        }
+        .sidebar { width: 30%; background: white; padding: 40px 20px; box-sizing: border-box; border-right: 5px solid var(--rosa-bebe); text-align: center; position: sticky; top: 0; height: 100vh; }
+        .foto-perfil { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--rosa-destaque); box-shadow: var(--brilho-rosa); object-fit: cover; margin-bottom: 15px; }
+        .badge-expert { background: linear-gradient(90deg, #FF69B4, #D4AF37); color: white; padding: 10px 20px; border-radius: 25px; font-weight: bold; margin: 15px 0; display: inline-block; font-size: 13px; box-shadow: var(--brilho-rosa); }
         
-        /* Botões de Contato */
-        .btn-acao { display: inline-block; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; color: white; margin: 8px 5px; font-size: 13px; transition: 0.3s; width: 85%; text-align: center; }
+        .btn-acao { display: block; padding: 12px; border-radius: 50px; text-decoration: none; font-weight: bold; color: white; margin: 10px auto; width: 90%; transition: 0.3s; }
         .btn-linkedin { background: #0077b5; }
-        .btn-email { background: var(--rosa-destaque); box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3); }
+        .btn-email { background: var(--rosa-destaque); }
 
-        /* Conteúdo Principal */
-        .main-content { width: 100%; padding: 30px; box-sizing: border-box; }
+        .main-content { width: 70%; padding: 40px; box-sizing: border-box; overflow-y: auto; }
         .card { background: white; padding: 25px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 6px solid var(--rosa-destaque); }
         
         h2 { color: var(--rosa-destaque); font-size: 20px; border-bottom: 2px solid var(--rosa-bebe); padding-bottom: 10px; margin-top: 0; }
-        h3 { color: #444; font-size: 16px; margin: 20px 0 5px; font-weight: 600; text-transform: uppercase; }
-
-        /* Links e Descrições */
-        .link-item { color: var(--rosa-destaque); font-weight: 600; text-decoration: none; font-size: 14px; display: block; margin-top: 10px; transition: 0.2s; }
+        h3 { color: #444; font-size: 16px; margin: 20px 0 10px; font-weight: 600; text-transform: uppercase; }
+        .link-item { color: var(--rosa-destaque); font-weight: 600; text-decoration: none; display: block; margin-top: 10px; }
         .link-item:hover { color: var(--dourado); text-decoration: underline; }
-        .desc-item { font-size: 12px; color: #777; margin-bottom: 8px; border-bottom: 1px solid #fdf2f5; padding-bottom: 5px; }
+        .desc-item { font-size: 13px; color: #777; margin-top: 5px; }
 
-        @media (min-width: 768px) { body { flex-direction: row; } .sidebar { width: 30%; min-height: 100vh; border-bottom: none; border-right: 5px solid var(--rosa-bebe); position: sticky; top: 0; } .main-content { width: 70%; } }
+        @media (max-width: 768px) { body { flex-direction: column; } .sidebar, .main-content { width: 100%; height: auto; position: relative; } }
     </style>
 </head>
 <body>
     <aside class="sidebar">
         <img src="1771861210570 (1).png" alt="Viviane Setiba" class="foto-perfil">
-        <h1 style="color: var(--rosa-destaque); margin: 10px 0; font-size: 24px;">Viviane Setiba</h1>
+        <h1 style="color: var(--rosa-destaque); font-size: 22px;">Viviane Setiba</h1>
         <div class="badge-expert">💎 Campus Expert #15</div>
-        <p style="font-size: 14px; color: #666; font-weight: 600;">📍 São Gonçalo, RJ - Brasil</p>
-        <p style="font-size: 13px; color: #888;">Consultora de Vendas Online | ViviTech</p>
-        
-        <div style="margin-top: 20px;">
-            <a href="mailto:v16cursos@gmail.com" class="btn-acao btn-email">📧 Enviar E-mail</a>
-            <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-acao btn-linkedin">LinkedIn Profissional</a>
-        </div>
+        <p>📍 São Gonçalo, RJ - Brasil</p>
+        <a href="mailto:v16cursos@gmail.com" class="btn-acao btn-email">📧 Enviar E-mail</a>
+        <a href="https://www.linkedin.com/in/viviane-setiba-b450a33a6" target="_blank" class="btn-acao btn-linkedin">LinkedIn</a>
     </aside>
 
     <main class="main-content">
         <section>
             <h2>Sobre a Expert (2026)</h2>
             <div class="card">
-                <p style="font-size: 1.1em; color: var(--rosa-destaque); font-weight: 600; margin-bottom: 15px;">"Mulher divergente trazendo minha expertise em vendas e gestão para construir soluções tecnológicas com impacto real."</p>
-                <p>Mãe de 4 filhos e líder resiliente, estou em plena transição de carreira como aluna <strong>DIO Pro Vitalício</strong> na <strong>Digital Innovation One (DIO)</strong> — a maior plataforma de educação tech da América Latina. [span_0](start_span)[span_1](start_span)Como <strong>Campus Expert</strong>, conecto minha visão estratégica à tecnologia para criar impacto real[span_0](end_span)[span_1](end_span).</p>
+                <p style="font-size: 1.1em; color: var(--rosa-destaque); font-weight: 600;">"Mulher divergente trazendo minha expertise em vendas e gestão para construir soluções tecnológicas com impacto real."</p>
+                <p>Mãe de 4 filhos e líder resiliente, estou em plena transição de carreira como aluna <strong>DIO Pro Vitalício</strong> na <strong>Digital Innovation One (DIO)</strong> — a maior plataforma de educação tech da América Latina. Como <strong>Campus Expert</strong>, conecto minha visão estratégica à tecnologia para criar impacto real.</p>
             </div>
         </section>
 
         <section>
-            <h2>Certificações & Conquistas DIO</h2>
+            <h2>Certificações & Conquistas</h2>
             <div class="card">
                 <h3>💎 Liderança & Comunidade</h3>
-                [span_2](start_span)<a href="https://www.dio.me/" class="link-item" target="_blank">📜 Embaixadora Campus Expert Turma 15[span_2](end_span)</a>
-                [span_3](start_span)<a href="https://www.dio.me/" class="link-item" target="_blank">📜 Boas-vindas ao Programa Campus Expert[span_3](end_span)</a>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:bfa07ac4-5e6a-493e-bd66-3fa2d0905f18" class="link-item" target="_blank">📜 Embaixadora Campus Expert 15</a>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:ab05a06d-03b1-4a03-904c-fe8192179c9e" class="link-item" target="_blank">📜 Boas-vindas ao Programa Expert</a>
 
-                <h3>🚀 Aceleração Microsoft & IA</h3>
-                [span_4](start_span)<a href="https://www.dio.me/" class="link-item" target="_blank">🤖 Gestão de Dados & IA - Microsoft[span_4](end_span)</a>
-                [span_5](start_span)<a href="https://www.dio.me/" class="link-item" target="_blank">🎓 Aplicações Práticas de IA[span_5](end_span)</a>
-                [span_6](start_span)<a href="https://www.dio.me/" class="link-item" target="_blank">📄 Introdução a AZ-204 com a Microsoft[span_6](end_span)</a>
+                <h3>🚀 Inovação (Caixa & Microsoft)</h3>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:da617120-501f-4222-b7f9-0da835e25443" class="link-item" target="_blank">🎓 Diploma Desafio da Caixa</a>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:b92bd9f7-97f9-479a-99b6-1cb2312f785f" class="link-item" target="_blank">🤖 Inteligência Artificial na Prática - Microsoft</a>
 
-                <h3>🎨 Formação Profissional Adobe & Design</h3>
+                <h3>🎨 Formação Adobe Professional</h3>
                 <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e3fac528-72c0-476e-8bab-4b1c46d27815" class="link-item" target="_blank">📄 Adobe Professional - Nível 1</a>
                 <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:e71692c1-2510-4e77-9e08-736133c48b38" class="link-item" target="_blank">📄 Adobe Professional - Nível 2</a>
                 <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:1d996d48-3a81-496a-8673-a6006e987f63" class="link-item" target="_blank">📄 Adobe Professional - Nível 3</a>
 
-                <h3>🛡️ Cibersegurança & Outros</h3>
-                [span_7](start_span)<a href="https://www.dio.me/" class="link-item" target="_blank">🛡️ Lançamento Riachuelo - Cibersegurança[span_7](end_span)</a>
-                [span_8](start_span)<a href="https://www.dio.me/" class="link-item" target="_blank">🏦 Módulo Desafio Caixa[span_8](end_span)</a>
+                <h3>🛡️ Cibersegurança</h3>
+                <a href="https://www.dio.me/" class="link-item" target="_blank">🛡️ Lançamento Riachuelo - Cibersegurança</a>
             </div>
         </section>
 
@@ -101,17 +78,15 @@
             <h2>Projetos no GitHub</h2>
             <div class="card">
                 <a href="https://github.com/Viviane-tecIA/meu-primeiro-projeto-moda.git" class="link-item" target="_blank">👗 Projeto Moda & Estilo</a>
-                <p class="desc-item">E-commerce responsivo focado em elegância e UX.</p>
-                
+                <p class="desc-item">E-commerce responsivo focado em UX/UI.</p>
                 <a href="https://github.com/Viviane-tecIA/caixa-familia-app.git" class="link-item" target="_blank">🏠 Caixa Família App</a>
-                <p class="desc-item">Gestão financeira para impacto social e organização familiar.</p>
-
+                <p class="desc-item">Gestão financeira para impacto social familiar.</p>
                 <a href="https://github.com/Viviane-tecIA/curriculo-vivi-tech.git" class="link-item" target="_blank">✨ Currículo Digital ViviTech</a>
-                <p class="desc-item">Este portfólio interativo com efeitos de glamour.</p>
+                <p class="desc-item">Este portfólio interativo com efeitos de brilho.</p>
             </div>
         </section>
         
-        <p style="text-align: center; margin-top: 20px; font-style: italic; color: var(--rosa-destaque); font-weight: 600;">
+        <p style="text-align: center; font-style: italic; color: var(--rosa-destaque); font-weight: 600;">
             "A tecnologia passa, o estilo é eterno." 💗
         </p>
     </main>
